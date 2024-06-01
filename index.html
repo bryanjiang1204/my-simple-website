@@ -178,8 +178,8 @@
             <form id="contact-form">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message"></textarea><br>
                 <button type="submit">Submit</button>
@@ -194,7 +194,7 @@
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             var formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycbyxtzjU001Ii6qpuIoj_2cMAiGgJugRt05Vv-zdpNM10Nrptwd1xns2Yx9w10GrZ-ZNCw/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbzQSwpov5lmJ6IF58YEkbehgPYMUi1E_8X7DLVZiBmYyO3dIKByOs0V_1d7Hm3CRTXhYA/exec', {
                 method: 'POST',
                 body: formData
             }).then(function(response) {
