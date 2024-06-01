@@ -33,8 +33,10 @@
                 <input type="text" id="name" name="name"><br>
                 <label for="phone">Phone Number:</label><br>
                 <input type="tel" id="phone" name="phone"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br>
+                <label for="ticker">Ticker Symbol (Ex: AAPL):</label><br>
+                <input type="text" id="ticker" name="ticker"><br>
+                <label for="price">Price (Ex: $123.25):</label><br>
+                <input type="text" id="price" name="price"><br>
                 <button type="submit">Submit</button>
             </form>
             <p id="form-response"></p>
@@ -47,7 +49,7 @@
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             var formData = new FormData(this);
-            fetch('https://script.google.com/macros/s/AKfycby5_Q2FD5eGvjJu958PHHfNCWk9QzrAle8MvHtg4RiWTwC4OgW1f9Y-p--Q_ka26ITWjQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbzAsD7kd0rsXIY8YhSGI0r4MVBYUPmSDhKpMRLBvKh94YXSODNgVMrjF7EoF561fF_BZA/exec', {
                 method: 'POST',
                 body: formData
             }).then(function(response) {
